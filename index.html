@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy New Year Surprise ❤️</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            font-family: 'Georgia', serif;
+            color: #fff;
+            overflow-y: auto;
+            text-align: center;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.8;
+            font-size: 18px;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+
+        .visible {
+            opacity: 1;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px rgba(255, 105, 180, 0.8);
+            letter-spacing: 2px;
+            padding-top: 50vh;
+        }
+
+        p {
+            margin-bottom: 50px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            opacity: 0;
+            transform: translateX(-100px); /* Default off-screen */
+            transition: opacity 1s, transform 1s;
+        }
+
+        /* Specific animations for each paragraph */
+        #para1.animate { transform: translateX(0); }
+        #para2.animate { transform: translateY(50px); animation: slideUp 1s ease-out; }
+        #para3.animate { animation: zoomIn 1s ease-out; }
+        #para4.animate { animation: rotateIn 1s ease-out; }
+        #para5.animate { transform: translateX(100px); animation: slideRight 1s ease-out; }
+        #para6.animate { animation: bounceIn 1s ease-out; }
+
+        @keyframes slideUp { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        @keyframes zoomIn { from { transform: scale(0.5); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+        @keyframes rotateIn { from { transform: rotate(-180deg); opacity: 0; } to { transform: rotate(0); opacity: 1; } }
+        @keyframes slideRight { from { transform: translateX(100px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+        @keyframes bounceIn { 0% { transform: scale(0.3); opacity: 0; } 50% { transform: scale(1.05); } 70% { transform: scale(0.9); } 100% { transform: scale(1); opacity: 1; } }
+
+        #startBtn {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 30px 60px;
+            font-size: 28px;
+            border-radius: 50px;
+            border: none;
+            background: linear-gradient(45deg, #ff2f92, #ff9a9e);
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 0 30px pink;
+            transition: transform 0.2s;
+            z-index: 1000;
+        }
+        #startBtn:hover, #startBtn:focus {
+            transform: translate(-50%, -50%) scale(1.05);
+            outline: 2px solid white;
+        }
+
+        .emoji {
+            position: absolute;
+            font-size: 30px;
+            animation: float 10s linear infinite;
+            opacity: 0.8;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        @keyframes float {
+            from { transform: translateY(100vh) rotate(0deg); }
+            to { transform: translateY(-100vh) rotate(360deg); }
+        }
+
+        #finalMessage {
+            font-size: 50px;
+            text-align: center;
+            animation: glow 1.5s infinite alternate;
+            opacity: 0;
+            transition: opacity 1s;
+            margin-top: 100px;
+            padding-bottom: 50vh;
+        }
+        @keyframes glow {
+            from { text-shadow: 0 0 20px pink, 0 0 40px pink; }
+            to { text-shadow: 0 0 30px white, 0 0 50px pink, 0 0 70px white; }
+        }
+
+        @media (max-width: 600px) {
+            .container { font-size: 16px; padding: 10px; }
+            h1 { font-size: 36px; }
+            #finalMessage { font-size: 36px; }
+            #startBtn { padding: 25px 50px; }
+        }
+    </style>
+</head>
+<body>
+    <button id="startBtn">Click for Surprise</button>
+    <div class="container" id="content">
+        <h1 id="title">HAPPPPY NEW YEAR MY PRETTY GIRLFRIEND</h1>
+        <p id="para1">From the last five years you were my friend, someone who slowly became a very important part of my life without me even realizing it. I still remember all those small moments that now feel so precious, like the time we used to go together from SST tuition to economics tuition. Those walks were simple, but they meant a lot to me. Talking to you, being around you, laughing with you made those days special without us even knowing what the future was holding. Somewhere between those moments, my heart quietly started choosing you.</p>
+        
+        <p id="para2">I can never forget 30 May at 9:11 PM, the moment you said “I love you” for the first time. That time stopped for me. My heart felt something it had never felt before. That one sentence changed everything inside me. I still remember how real it felt, how pure it felt, how deeply it touched my heart. From that moment, my feelings for you became stronger, clearer and more honest. Then on 30 December, when you became my girlfriend, it felt like destiny finally said yes to us. You didn’t just become my girlfriend, you became my peace, my happiness and the most beautiful part of my life.</p>
+        
+        <p id="para3">I want you to know how much I truly love you. I promise you from my heart that I am never going to leave you. No matter what life brings, no matter how hard things get, I will always stand by you. Loving you is not a choice anymore, it feels natural and permanent. You make my life feel complete in a way I never imagined. Being with you makes me calm, confident and happy. I feel proud to call you my girlfriend.</p>
+        
+        <p id="para4">I respect you deeply for the person you are and for the effort you put into your life every single day. I see your hard work, your patience, your strength and your dedication even when you don’t talk about it. You are worth so much more than you realize. I am proud of you and I always will be. I want to guide you, support you, protect you and walk beside you in every phase of life. I want to grow with you, not just love you.</p>
+        
+        <p id="para5">You accepted me with your whole heart and that means everything to me. Now it is my responsibility to become better for you. I promise you I will work very very hard in my life so that one day I can be accepted by your family with respect. I want to reach a point where they feel proud of you and confident in me. I don’t take this lightly, I take this as my promise and my future with you.</p>
+        
+        <p id="para6">This New Year, I don’t ask life for anything else except you. I want to take you forever with me, through happiness, struggles, growth and success. You are not just my girlfriend, you are my best friend, my love and my safe place. Thank you for choosing me, for loving me and for being you. My heart is yours, today, tomorrow and always. I love you.</p>
+        
+        <div id="finalMessage">I LOVE YOOUUU SO MUCH NANNY</div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let emojiCount = 0;
+            const maxEmojis = 15;
+            const btn = document.getElementById("startBtn");
+            const content = document.getElementById("content");
+            const title = document.getElementById("title");
+            const paras = document.querySelectorAll("p");
+            const finalMessage = document.getElementById("finalMessage");
+            const emojis = ["❤️", "⭐", "🌸", "💖", "🌟", "🌹", "✨", "💕", "🌷", "🌺"];
+
+            function spawnEmoji() {
+                if (emojiCount >= maxEmojis) return;
+                const emoji = document.createElement("div");
+                emoji.className = "emoji";
+                emoji.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+                emoji.style.left = Math.random() * 100 + "vw";
+                emoji.style.animationDuration = (8 + Math.random() * 4) + "s";
+                document.body.appendChild(emoji);
+                emojiCount++;
+                setTimeout(() => { emoji.remove(); emojiCount--; }, 10000);
+            }
+
+            const emojiInterval = setInterval(spawnEmoji, 1500);
+
+            btn.onclick = () => {
+                btn.style.display = "none";
+                content.classList.add("visible");
+                title.classList.add("visible");
+
+                setTimeout(() => {
+                    paras[0].classList.add("visible", "animate");
+                    paras[0].scrollIntoView({ behavior: 'smooth' });
+                }, 1000);
+
+                setTimeout(() => {
+                    paras[1].classList.add("visible", "animate");
+                    paras[1].scrollIntoView({ behavior: 'smooth' });
+                }, 4000);
+
+                setTimeout(() => {
+                    paras[2].classList.add("visible", "animate");
+                    paras[2].scrollIntoView({ behavior: 'smooth' });
+                }, 7000);
+
+                setTimeout(() => {
+                    paras[3].classList.add("visible", "animate");
+                    paras[3].scrollIntoView({ behavior: 'smooth' });
+                }, 10000);
+
+                setTimeout(() => {
+                    paras[4].classList.add("visible", "animate");
+                    paras[4].scrollIntoView({ behavior: 'smooth' });
+                }, 13000);
+
+                setTimeout(() => {
+                    paras[5].classList.add("visible", "animate");
+                    paras[5].scrollIntoView({ behavior: 'smooth' });
+                }, 16000);
+
+                setTimeout(() => {
+                    finalMessage.style.opacity = 1;
+                    finalMessage.scrollIntoView({ behavior: 'smooth' });
+                    clearInterval(emojiInterval);
+                }, 19000);
+            };
+        });
+    </script>
+</body>
+</html>
+      
